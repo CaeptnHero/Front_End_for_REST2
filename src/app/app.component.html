@@ -1,0 +1,21 @@
+<h1>Welcome, User </h1>  <!-- {{ name }} -->
+<div class ="container">
+    <div class = "card">
+        <h3 class="text-center"> Model List</h3>
+        <div class = "card-body">
+            <table class="table table-striped">
+                <thead>
+                    <th>Name</th>
+                    <th>Adress</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let model of models">
+                        <td>{{ model.modelName }}</td>
+                        <td>{{ model.modelAdress }}</td>
+                    </tr>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+</div>
