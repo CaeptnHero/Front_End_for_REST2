@@ -35,10 +35,14 @@ export class AppComponent implements OnInit {
   //received date beeing saved in Model-Array
   //Data form the component available und ready to display
   ngOnInit(): void {
-    this.apiService.getName().subscribe(
-      (data: Model[]) => {
-        this.models = data; // Set Data in Model
+    this.apiService.getModels().subscribe(
+      (data: Model[] | Model) => {
+        if (Array.isArray(data)) {
+          this.models = data; 
+        } else {
+          this.models = [data];
+        }
       },
     );
   }
-}  
+}

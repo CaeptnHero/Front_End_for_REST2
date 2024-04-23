@@ -10,7 +10,7 @@ import { Model } from './model';
 
   export class ApiService {
     //Base Url for api requests from Backend
-    private baseUrl = 'http://localhost:8080/model/modelname';
+    private baseUrl = 'http://localhost:8080/model/Max/Berlin';
 
     //initializes the HttpClient=sends HttpRequest
     //to the server and receives data
@@ -18,7 +18,7 @@ import { Model } from './model';
 
     //Method=sends GET-recuest to the base URL
     //and expect an answer (Model-Array with Objects)
-    getName(): Observable<Model[]>{
+    getModels(): Observable<Model[]>{
         return this.http.get<Model[]>(`${this.baseUrl}`);
     }
   }  
