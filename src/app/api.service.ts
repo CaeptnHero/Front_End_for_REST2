@@ -10,7 +10,7 @@ import { Model } from './model';
 
   export class ApiService {
     //Base Url for api requests from Backend
-    private baseUrl = 'http://localhost:8080/model/Max/Berlin';
+    private baseUrl = 'http://localhost:8080/model';
 
     //initializes the HttpClient=sends HttpRequest
     //to the server and receives data
